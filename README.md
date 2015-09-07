@@ -1,2 +1,1 @@
-# yimaif
-yimaif-front-end
+yimaif-frontend

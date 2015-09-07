@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh" style="font-size: 62.5%">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="易买房,提高您的买房效率,准确定位房源">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>易买房</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="yimaifang">
+    <link rel="stylesheet" href="../css/basic.css"/>
+    <link rel="stylesheet" href="../css/frozen.css"/>
+    <style>
+        .houseFeed {
+
+        }
+        .houseFeed ul li{
+            padding: 0 12px;
+        }
+        .houseFeed ul li a{
+            display: block;
+            overflow: hidden;
+        }
+        .houseFeed ul li a .cnt{
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            margin: 12px 0;
+        }
+        .pic{
+            position: relative;
+        }
+        .pic_height{
+            height: 168px;
+            overflow: hidden;
+        }
+        .pic canvas {
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+        }
+        .pic_txt{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px 5px 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #fff;
+            background: -ms-linear-gradient(top,rgba(0,0,0,0.5),rgba(255,255,255,0));
+            background: -webkit-linear-gradient(top,rgba(0,0,0,0.5),rgba(255,255,255,0));
+            background: -moz-linear-gradient(top,rgba(0,0,0,0.5),rgba(255,255,255,0));
+            background: -o-linear-gradient(top,rgba(0,0,0,0.5),rgba(255,255,255,0));
+            background: linear-gradient(top,rgba(0,0,0,0.5),rgba(255,255,255,0));
+        }
+        .pic_txt .pic_name{
+            font-size: 16px;
+        }
+        .pic_txt div{
+            padding: 10px 12px 0 12px;
+            font-size: 1.4rem;
+            text-shadow: 0px 1px 2px #000;
+        }
+        .pic_txt .house_price {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .hose_price_wrap span {
+            text-shadow: 0px 1px 2px #000;
+        }
+        .borderNotop{
+            border: 1px solid #eee;
+            border-top: none;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        .evaluation_title {
+            line-height: 36px;
+            font-size: 1.4rem;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        .evaluation_dec{
+            line-height: 24px;
+            margin-bottom: 12px;
+            height: 40px;
+            color: #000000;
+        }
+        .houseFeed canvas{
+            background-color: #efefef;
+            background-image: url("../images/loading.gif");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 16px 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="mainPage">
+    <header id="header" class="ui-header ui-header-stable ui-border-b" style="padding: 0 40px;background-color: #ebeced">
+        <!--<i class="ui-icon-return" onclick="history.back()"></i>-->
+        <span style="position: absolute;left: 10px;">上海</span>
+        <div class="ui-searchbar-wrap ui-border-b" >
+            <div class="ui-searchbar ui-border-radius">
+                <i class="ui-icon-search" ></i>
+
+                <div class="ui-searchbar-text">搜索小区名称</div>
+                <!--<div class="ui-searchbar-input"><input value="" type="text" placeholder="请输入小区名称或地址" autocapitalize="off">-->
+            </div>
+            <i class="ui-icon-close"></i>
+        </div>
+    </header>
+    <div class="mainContent" style="padding-top: 45px">
+        <div class="search_action">
+            <div class="ui-tab">
+                <ul class="ui-tab-nav ui-border-b">
+                    <li id="user_search" class="ui-border-r">手动筛选</li>
+                    <li id="smart">智能推荐</li>
+                </ul>
+            </div>
+        </div>
+        <div class="houseFeed">
+            <ul>
+                <li>
+                    <a href="">
+                        <div class="cnt mt12 mb12">
+                            <div class="pic">
+                                <div class="pic_height">
+                                    <canvas  data-src="../serveImg/600x338.jpg" width="600" height="338" />
+                                </div>
+                                <div class="pic_txt">
+                                    <div class="pic_name">
+                                        <span>日月光伯爵天地</span>
+                                        <span>|</span>
+                                        <span>[嘉定-嘉定新城]</span>
+                                    </div>
+                                    <div class="hose_price_wrap">
+                                        <span class="house_price">19,000</span>
+                                        <span>元/平</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="wrap pl12  ui-border">
+                                <div class="evaluation_title">
+                                    <p class="evaluation_dec">
+                                        项目在售公寓主力户型为90-91平米2房  项目在售公寓主力户型为90-91平米2房，均价14000元/平米，黄渡地区毛坯公寓均价16000元/平左右，相比之下本案的公寓价格比要便宜约2000元/平米，性价比较高，为刚需客群首选。不足之处在于周边环境让人不舒服，有许多高压塔、工厂及旧式民宅平房；周边河道缺乏整治且形成阻隔，导致去昌吉东路地铁站要绕不少路，
+                                    </p>
+                                </div>
+
+
+                                <div class="ui-label-list">
+                                    <label class="ui-label-s">2005年</label>
+                                    <label class="ui-label-s">电梯</label>
+                                    <label class="ui-label-s">1室1厅</label>
+                                    <label class="ui-label-s">2室2厅</label>
+                                    <label class="ui-label-s">3室2厅</label>
+                                    <label class="ui-label-s">学区房</label>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="cnt mt12 mb12">
+                            <div class="pic">
+                                <div class="pic_height">
+                                    <canvas  data-src="../serveImg/600x338.jpg" width="600" height="338" />
+                                </div>
+                                <div class="pic_txt">
+                                    <div class="pic_name">
+                                        <span>日月光伯爵天地</span>
+                                        <span>|</span>
+                                        <span>[嘉定-嘉定新城]</span>
+                                    </div>
+                                    <div class="hose_price_wrap">
+                                        <span class="house_price">19,000</span>
+                                        <span>元/平</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="wrap pl12  ui-border">
+                                <div class="evaluation_title">
+                                    <p class="evaluation_dec">
+                                        项目在售公寓主力户型为90-91平米2房  项目在售公寓主力户型为90-91平米2房，均价14000元/平米，黄渡地区毛坯公寓均价16000元/平左右，相比之下本案的公寓价格比要便宜约2000元/平米，性价比较高，为刚需客群首选。不足之处在于周边环境让人不舒服，有许多高压塔、工厂及旧式民宅平房；周边河道缺乏整治且形成阻隔，导致去昌吉东路地铁站要绕不少路，
+                                    </p>
+                                </div>
+
+
+                                <div class="ui-label-list">
+                                    <label class="ui-label-s">2005年</label>
+                                    <label class="ui-label-s">电梯</label>
+                                    <label class="ui-label-s">1室1厅</label>
+                                    <label class="ui-label-s">2室2厅</label>
+                                    <label class="ui-label-s">3室2厅</label>
+                                    <label class="ui-label-s">学区房</label>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="cnt mt12 mb12">
+                            <div class="pic">
+                                <div class="pic_height">
+                                    <canvas  data-src="../serveImg/600x338.jpg" width="600" height="338" />
+                                </div>
+                                <div class="pic_txt">
+                                    <div class="pic_name">
+                                        <span>日月光伯爵天地</span>
+                                        <span>|</span>
+                                        <span>[嘉定-嘉定新城]</span>
+                                    </div>
+                                    <div class="hose_price_wrap">
+                                        <span class="house_price">19,000</span>
+                                        <span>元/平</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="wrap pl12  ui-border">
+                                <div class="evaluation_title">
+                                    <p class="evaluation_dec">
+                                        项目在售公寓主力户型为90-91平米2房  项目在售公寓主力户型为90-91平米2房，均价14000元/平米，黄渡地区毛坯公寓均价16000元/平左右，相比之下本案的公寓价格比要便宜约2000元/平米，性价比较高，为刚需客群首选。不足之处在于周边环境让人不舒服，有许多高压塔、工厂及旧式民宅平房；周边河道缺乏整治且形成阻隔，导致去昌吉东路地铁站要绕不少路，
+                                    </p>
+                                </div>
+
+
+                                <div class="ui-label-list">
+                                    <label class="ui-label-s">2005年</label>
+                                    <label class="ui-label-s">电梯</label>
+                                    <label class="ui-label-s">1室1厅</label>
+                                    <label class="ui-label-s">2室2厅</label>
+                                    <label class="ui-label-s">3室2厅</label>
+                                    <label class="ui-label-s">学区房</label>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <div class="cnt mt12 mb12">
+                            <div class="pic">
+                                <div class="pic_height">
+                                    <canvas  data-src="../serveImg/600x338.jpg" width="600" height="338" />
+                                </div>
+                                <div class="pic_txt">
+                                    <div class="pic_name">
+                                        <span>日月光伯爵天地</span>
+                                        <span>|</span>
+                                        <span>[嘉定-嘉定新城]</span>
+                                    </div>
+                                    <div class="hose_price_wrap">
+                                        <span class="house_price">19,000</span>
+                                        <span>元/平</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="wrap pl12  ui-border">
+                                <div class="evaluation_title">
+                                    <p class="evaluation_dec">
+                                        项目在售公寓主力户型为90-91平米2房  项目在售公寓主力户型为90-91平米2房，均价14000元/平米，黄渡地区毛坯公寓均价16000元/平左右，相比之下本案的公寓价格比要便宜约2000元/平米，性价比较高，为刚需客群首选。不足之处在于周边环境让人不舒服，有许多高压塔、工厂及旧式民宅平房；周边河道缺乏整治且形成阻隔，导致去昌吉东路地铁站要绕不少路，
+                                    </p>
+                                </div>
+
+
+                                <div class="ui-label-list">
+                                    <label class="ui-label-s">2005年</label>
+                                    <label class="ui-label-s">电梯</label>
+                                    <label class="ui-label-s">1室1厅</label>
+                                    <label class="ui-label-s">2室2厅</label>
+                                    <label class="ui-label-s">3室2厅</label>
+                                    <label class="ui-label-s">学区房</label>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div id="search_page" style="display: none">
+    <div class="ui-searchbar-wrap ui-border-b">
+        <div class="ui-searchbar ui-border-radius">
+            <i class="ui-icon-search"></i>
+            <div class="ui-searchbar-text">搜索小区名称</div>
+            <div class="ui-searchbar-input"><input value="" type="tel" placeholder="请输入小区名称或地址" autocapitalize="off"></div>
+            <i class="ui-icon-close"></i>
+        </div>
+        <button class="ui-searchbar-cancel">取消</button>
+    </div>
+</div>
+<script src="../js/lib/zepto.min.js"></script>
+<script src="../js/lib/frozen.js"></script>
+<script>
+    var ymf_config = {
+        staticUrl: '',
+        baseUrl: ''
+    }
+</script>
+<script src="../js/pages/main.js"></script>
+
+</body>
+</html>
