@@ -11,107 +11,129 @@
     <link rel="stylesheet" href="../css/basic.css"/>
     <link rel="stylesheet" href="../css/frozen.css"/>
     <style>
-      *{
-        box-sizing: border-box;
-      }
+        * {
+            box-sizing: border-box;
+        }
+
         .houseFeed {
 
         }
-        .houseFeed ul li{
-            padding: 0 12px;
+
+        .houseFeed ul li {
+            /*padding: 0 12px;*/
         }
-        .houseFeed ul li a{
+
+        .houseFeed ul li a {
             display: block;
             overflow: hidden;
         }
-        .houseFeed ul li a .cnt{
+
+        .houseFeed ul li a .cnt {
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
             border-radius: 5px;
             margin: 12px 0;
         }
-        .pic{
+
+        .pic {
             position: relative;
         }
-        .media-cover, .media-cover-dark:after{
-          position: absolute;
-          z-index: 0;
-          top: 0;left: 0;bottom: 0;
-          right: 0;
+
+        .media-cover, .media-cover-dark:after {
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
             overflow: hidden;
         }
-        .media-photo{
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-          display: inline-block;
-          vertical-align: bottom;
-          overflow: hidden;
-          background-color: #cacccd;
+
+        .media-photo {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: inline-block;
+            vertical-align: bottom;
+            overflow: hidden;
+            background-color: #cacccd;
         }
-        .text-center{
-          text-align: center;
+
+        .text-center {
+            text-align: center;
         }
+
         .houseFeed ul li {
-          margin-bottom: 12px;
+            margin-bottom: 12px;
         }
-        .img-responsive-height{
-          height: 100%;
-          width: auto;
-          vertical-align: middle;
-          border: 0;
+
+        .img-responsive-height {
+            height: 100%;
+            width: auto;
+            vertical-align: middle;
+            border: 0;
         }
-      .listing-img-container{
-        z-index:1;
-      }
-        .pic_txt{
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-            border-radius: 5px 5px 0 0;
+
+        .listing-img-container {
+            z-index: 1;
+        }
+
+        .pic_txt {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /*border-radius: 5px 5px 0 0;*/
             position: absolute;
 
             color: #fff;
-            background: -ms-linear-gradient(top,rgba(0,0,0,0.5),rgba(255,255,255,0));
-            background: -webkit-linear-gradient(top,rgba(0,0,0,0.5),rgba(255,255,255,0));
-            background: -moz-linear-gradient(top,rgba(0,0,0,0.5),rgba(255,255,255,0));
-            background: -o-linear-gradient(top,rgba(0,0,0,0.5),rgba(255,255,255,0));
-            background: linear-gradient(top,rgba(0,0,0,0.5),rgba(255,255,255,0));
+            background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
+            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
+            background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
+            background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
+            background: linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0));
         }
-        .pic_txt .pic_name{
+
+        .pic_txt .pic_name {
             font-size: 16px;
         }
-        .pic_txt div{
+
+        .pic_txt div {
             padding: 10px 12px 0 12px;
             font-size: 1.4rem;
             text-shadow: 0px 1px 2px #000;
         }
+
         .pic_txt .house_price {
             font-size: 2rem;
             font-weight: bold;
         }
+
         .hose_price_wrap span {
             text-shadow: 0px 1px 2px #000;
         }
-        .borderNotop{
+
+        .borderNotop {
             border: 1px solid #eee;
             border-top: none;
             border-bottom-right-radius: 5px;
             border-bottom-left-radius: 5px;
         }
+
         .evaluation_title {
             line-height: 36px;
             font-size: 1.4rem;
             overflow: hidden;
             margin-bottom: 5px;
         }
-        .evaluation_dec{
+
+        .evaluation_dec {
             line-height: 24px;
             margin-bottom: 12px;
             height: 40px;
             color: #000000;
         }
-        .houseFeed canvas{
+
+        .houseFeed canvas {
             background-color: #efefef;
             background-image: url("../images/loading.gif");
             background-repeat: no-repeat;
@@ -119,32 +141,334 @@
             background-size: 16px 16px;
         }
 
-      .panel-image{
-        position: relative;
-      }
-      .listing-img{
-        overflow: hidden;
-        padding-bottom: 67%;
+        .panel-image {
+            position: relative;
+        }
 
-      }
-      .ui-label-list{
-        margin: 0;
-      }
-      .ui-label-s{
-        font-size: 16px;
-        line-height: 20px;
-      }
+        .listing-img {
+            overflow: hidden;
+            padding-bottom: 67%;
+
+        }
+
+        .ui-label-list {
+            margin: 0;
+        }
+
+        .ui-label-s {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            width: 50px;
+            line-height: 50px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            z-index: 100;
+            font-size: 50px;
+            background-color: #00a5e0;
+            color: #ffffff;
+        }
+
+        .filter-btn {
+            z-index: 100;
+            width: 100%;
+        }
+    </style>
+
+    <style>
+        .col-1, .col-sm-1, .col-md-1, .col-lg-1, .col-2, .col-sm-2, .col-md-2, .col-lg-2, .col-3, .col-sm-3, .col-md-3, .col-lg-3, .col-4, .col-sm-4, .col-md-4, .col-lg-4, .col-5, .col-sm-5, .col-md-5, .col-lg-5, .col-6, .col-sm-6, .col-md-6, .col-lg-6, .col-7, .col-sm-7, .col-md-7, .col-lg-7, .col-8, .col-sm-8, .col-md-8, .col-lg-8, .col-9, .col-sm-9, .col-md-9, .col-lg-9, .col-10, .col-sm-10, .col-md-10, .col-lg-10, .col-11, .col-sm-11, .col-md-11, .col-lg-11, .col-12, .col-sm-12, .col-md-12, .col-lg-12 {
+            position: relative;
+            min-height: 1px;
+            padding-left: 12.5px;
+            padding-right: 12.5px;
+        }
+
+        .panel-header + .panel-body, .panel-body + .panel-body, ul.panel-body > li + .panel-body, ol.panel-body > li + .panel-body, .panel-footer + .panel-body {
+            border-top: none;
+        }
+
+        .panel-header, .panel-dark {
+            background-color: #edefed;
+        }
+
+        .panel-light {
+            background-color: #fff;
+        }
+
+        .panel-header {
+            color: #565a5c;
+            font-size: 16px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #dce0e0;
+        }
+
+        .panel-header {
+            font-size: 15px;
+        }
+
+        .show-sm {
+            display: block !important;
+        }
+
+        .panel-header, .panel-body, ul.panel-body > li, ol.panel-body > li, .panel-footer {
+            position: relative;
+            margin: 0;
+            padding: 20px;
+            border-top: 1px solid #dce0e0;
+        }
+
+        .panel-body {
+            position: relative;
+        }
+
+        .panel-body + .panel-body:before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            height: 1px;
+            left: 20px;
+            right: 20px;
+            border-top: 1px solid #dce0e0;
+            border-color: rgba(220, 224, 224, 0.5);
+        }
+
+        .filters-section {
+            padding-top: 15px;
+            color: #565a5c;
+            padding-bottom: 15px;
+
+        }
+
+        .panel-body > *:last-child {
+            margin-bottom: 0;
+        }
+
+        .panel-body > *:first-child {
+            margin-top: 0;
+        }
+
+        .row {
+            margin-left: -12.5px;
+            margin-right: -12.5px;
+        }
+
+        .filter-label {
+            padding: 0 12.5px;
+            min-height: 1px;
+            position: relative;
+            text-align: center;
+        }
+
+        .filter-label label {
+            display: block;
+            padding-top: 9px;
+            padding-bottom: 8px;
+            line-height: normal;
+            font-size: 14px;
+        }
+
+        .search-form {
+            padding: 0 12.5px;
+            position: relative;
+            min-height: 1px;
+        }
+
+        .row-condensed {
+            margin-left: -6.25px;
+            margin-right: -6.25px;
+        }
+
+        .row-condensed .col-sm-12 {
+            padding-left: 6.25px;
+            padding-right: 6.25px;
+        }
+
+        .row-space-1 {
+            margin-bottom: 6.25px;
+        }
+
+        .col-sm-12 {
+            width: 100%;
+            float: left;
+        }
+
+        .select {
+            position: relative;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+
+        *, *:before, *:after, hr, hr:before, hr:after, input[type="search"], input[type="search"]:before, input[type="search"]:after {
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .select:before {
+            content: '\25bc';
+            position: absolute;
+            pointer-events: none;
+            color: #82888a;
+            top: 0;
+            bottom: 1px;
+            padding-top: 0.7em;
+            line-height: 1;
+            right: 0;
+            width: 2em;
+            text-align: center;
+            transform: scale(0.84, 0.42);
+            -webkit-transform: scale(0.84, 0.42);
+            -moz-transform: scale(0.84, 0.42);
+            -ms-transform: scale(0.84, 0.42);
+            -o-transform: scale(0.84, 0.42);
+            -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.84, M12=0, M21=0, M22=0.42, SizingMethod='auto expand')";
+            filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.84, M12=0, M21=0, M22=0.42, SizingMethod='auto expand');
+        }
+
+        .select-block {
+            display: block;
+            width: 100%;
+        }
+
+        .screen-reader-only {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        [type="text"], [type="password"], [type="search"], [type="email"], [type="url"], [type="number"], [type="tel"], textarea, select, .input-prefix, .input-suffix {
+            display: block;
+            padding: 8px 10px;
+            width: 100%;
+        }
+
+        [type="text"], [type="password"], [type="search"], [type="email"], [type="url"], [type="number"], [type="tel"], textarea, select, input[type="radio"], input[type="checkbox"] {
+            -webkit-transition: border-color 0.2s;
+            transition: border-color 0.2s;
+        }
+
+        [type="text"], [type="password"], [type="search"], [type="email"], [type="url"], [type="number"], [type="tel"], textarea, select, input[type="radio"], input[type="checkbox"], .input-prefix, .input-suffix {
+            border: 1px solid #c4c4c4;
+            border-radius: 2px;
+            background-color: #fff;
+            color: #565a5c;
+        }
+
+        input, button, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        button, select {
+            text-transform: none;
+        }
+
+        .row:before, .row:after {
+            content: " ";
+            display: table;
+        }
+
+        .row:after {
+            clear: both;
+        }
+
+        .select select {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-right: 2em;
+            font-size: 16px;
+            -webkit-appearance: none;
+        }
+        .p2-histogram{
+            position: relative;
+            top: 19px;
+        }
+        .p2-histogram-bar.active{
+            background: rgba(156,162,153,0.5);
+        }
+        .p2-histogram-bar {
+            background: rgba(156, 162, 153, 0.5);
+            display: inline-block;
+            width: 2%;
+        }
+        .p2-slider-new .airslide {
+            height: 24px;
+            position: relative;
+            overflow: visible;
+        }
+        .row-space-2 {
+            margin-bottom: 12.5px;
+        }
+        .p2-slider-new .airslide-background {
+            background: #dce0e0;
+            height: 2px;
+            position: relative;
+            top: 13px;
+            width: 100%;
+        }
+        .p2-slider-new .airslide-handle {
+            border: 1px solid #aaa;
+            background: #fff;
+            border-radius: 100%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+            height: 24px;
+            margin-left: -12px;
+            outline: none;
+            position: absolute;
+            z-index: 2;
+            width: 24px;
+        }
+        .p2-slider-new .airslide-progress {
+            background-color: #ff5a5f;
+            height: 4px;
+            position: absolute;
+            top: 13px;
+        }
+        .col-6 {
+            width: 50%;
+            float: left;
+        }
+        .text-right {
+            text-align: right;
+        }
+        .ui-checkbox input[type="checkbox"]{
+            border: 0;
+        }
+        .ui-switch input[type='checkbox']{
+            border: 0;
+            line-height: 0;
+        }
+        .houseType li{
+            margin-left: 0;
+        }
     </style>
 </head>
 <body>
 
-<div id="mainPage">
-    <header id="header" class="ui-header ui-header-stable ui-border-b" style="padding: 0 40px;background-color: #ebeced">
+<div id="mainPage" style="position: relative">
+    <header id="header" class="ui-header ui-header-stable ui-border-b"
+            style="padding: 0 40px;background-color: #ebeced">
         <!--<i class="ui-icon-return" onclick="history.back()"></i>-->
         <span style="position: absolute;left: 10px;">上海</span>
-        <div class="ui-searchbar-wrap ui-border-b" >
+
+        <div class="ui-searchbar-wrap ui-border-b">
             <div class="ui-searchbar ui-border-radius">
-                <i class="ui-icon-search" ></i>
+                <i class="ui-icon-search"></i>
 
                 <div class="ui-searchbar-text">搜索小区名称</div>
                 <!--<div class="ui-searchbar-input"><input value="" type="text" placeholder="请输入小区名称或地址" autocapitalize="off">-->
@@ -153,164 +477,461 @@
         </div>
     </header>
     <div class="mainContent" style="padding-top: 45px">
+        <div class="filters">
+            <div class="panel-header filters-section show-sm">
+                筛选条件
+            </div>
+
+            <div class="filters-section panel-body panel-light">
+                <div class="row">
+                    <div class="filter-label"><label for="">区域</label></div>
+                    <form class="search-form">
+                        <div class="row row-condensed">
+                            <div class="col-md-4 col-sm-12 row-space-1">
+                                <div class="select select-block">
+                                    <label for="map-search-min-bedrooms" class="screen-reader-only">
+                                        最少卧室数
+                                    </label>
+                                    <select name="min_bedrooms" class="min-bedrooms" id="map-search-min-bedrooms">
+                                        <option value="-1">区域</option>
+                                        <option value="1">黄埔</option>
+                                        <option value="2">松江</option>
+                                        <option value="3">长宁</option>
+                                        <option value="4">杨浦</option>
+                                        <option value="5">浦东</option>
+                                        <option value="6">徐汇</option>
+                                        <option value="7">青浦</option>
+                                        <option value="8">嘉定</option>
+                                        <option value="9">卢湾</option>
+                                        <option value="10">静安</option>
+                                        <option value="11">闸北</option>
+                                        <option value="11">闵行</option>
+                                        <option value="11">宝山</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-12 row-space-1">
+                                <div class="select select-block">
+                                    <label for="map-search-min-bathrooms" class="screen-reader-only">
+                                        最少卫生间数
+                                    </label>
+                                    <select name="min_bathrooms" class="min-bathrooms input-medium"
+                                            id="map-search-min-bathrooms">
+                                        <option value="-1">板块</option>
+                                        <option value="0.0">漕河泾</option>
+                                        <option value="0.0">吴江路</option>
+                                        <option value="0.0">人民广场</option>
+                                        <option value="0.0">陆家嘴</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+
+            <div class="filters-section panel-body panel-light">
+                <div class="row">
+                    <div class="filter-label"><label for="">房型</label></div>
+
+                    <ul class="ui-list ui-list-text ui-list-checkbox ui-border-b houseType" style="background-image:none;padding: 0 12.5px">
+                        <li class="ui-border-t">
+                            <label class="ui-checkbox">
+                                <input type="checkbox">
+                            </label>
+                            <p>一室</p>
+                        </li>
+                        <li class="ui-border-t">
+                            <label class="ui-checkbox">
+                                <input type="checkbox" checked>
+                            </label>
+                            <p>二室</p>
+                        </li>
+                        <li class="ui-border-t">
+                            <label class="ui-checkbox">
+                                <input type="checkbox" checked>
+                            </label>
+                            <p>三室</p>
+                        </li>
+                        <li class="ui-border-t">
+                            <label class="ui-checkbox">
+                                <input type="checkbox" checked>
+                            </label>
+                            <p>四室</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="filters-section panel-body panel-light">
+                <div class="row">
+                    <div class="filter-label"><label for="">总价</label></div>
+                    <form class="search-form">
+                        <div class="row row-condensed">
+                            <div class="col-md-4 col-sm-12 row-space-1">
+                                <div class="select select-block">
+                                    <label for="map-search-min-bedrooms" class="screen-reader-only">
+                                        最小总价
+                                    </label>
+                                    <select name="min_bedrooms" class="min-bedrooms" id="map-search-min-bedrooms">
+                                        <option value="-1">最小总价</option>
+                                        <option value="1">100万</option>
+                                        <option value="2">150万</option>
+                                        <option value="3">200万</option>
+                                        <option value="4">250万</option>
+                                        <option value="5">300万</option>
+                                        <option value="6">350万</option>
+                                        <option value="7">400万</option>
+                                        <option value="8">450万</option>
+                                        <option value="9">500万</option>
+                                        <option value="10">550万</option>
+                                        <option value="11">600万</option>
+                                        <option value="11">650万</option>
+                                        <option value="11">700万</option>
+                                        <option value="11">850万</option>
+                                        <option value="11">900万</option>
+                                        <option value="11">950万</option>
+                                        <option value="11">1000万</option>
+                                        <option value="11">1000万+</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-12 row-space-1">
+                                <div class="select select-block">
+                                    <label for="map-search-min-bathrooms" class="screen-reader-only">
+                                        最大总价
+                                    </label>
+                                    <select name="min_bathrooms" class="min-bathrooms input-medium"
+                                            id="map-search-min-bathrooms">
+                                        <option value="-1">最大总价</option>
+                                        <option value="1">100万</option>
+                                        <option value="2">150万</option>
+                                        <option value="3">200万</option>
+                                        <option value="4">250万</option>
+                                        <option value="5">300万</option>
+                                        <option value="6">350万</option>
+                                        <option value="7">400万</option>
+                                        <option value="8">450万</option>
+                                        <option value="9">500万</option>
+                                        <option value="10">550万</option>
+                                        <option value="11">600万</option>
+                                        <option value="11">650万</option>
+                                        <option value="11">700万</option>
+                                        <option value="11">850万</option>
+                                        <option value="11">900万</option>
+                                        <option value="11">950万</option>
+                                        <option value="11">1000万</option>
+                                        <option value="11">1000万+</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="filters-section panel-body panel-light">
+                <div class="row">
+                    <div class="filter-label"><label for="">面积</label></div>
+                    <form class="search-form">
+                        <div class="row row-condensed">
+                            <div class="col-md-4 col-sm-12 row-space-1">
+                                <div class="select select-block">
+                                    <label for="map-search-min-bedrooms" class="screen-reader-only">
+                                        最小面积
+                                    </label>
+                                    <select name="min_bedrooms" class="min-bedrooms" id="map-search-min-bedrooms">
+                                        <option value="-1">最小面积</option>
+                                        <option value="1">30平</option>
+                                        <option value="2">40平</option>
+                                        <option value="3">50平</option>
+                                        <option value="4">60平</option>
+                                        <option value="5">70平</option>
+                                        <option value="3">80平</option>
+                                        <option value="4">90平</option>
+                                        <option value="5">100平</option>
+                                        <option value="3">110平</option>
+                                        <option value="4">120平</option>
+                                        <option value="5">130平</option>
+                                        <option value="5">100平</option>
+                                        <option value="3">110平</option>
+                                        <option value="4">120平</option>
+                                        <option value="5">130平</option>
+                                        <option value="5">140平</option>
+                                        <option value="3">150平</option>
+                                        <option value="4">160平</option>
+                                        <option value="5">170平</option>
+                                        <option value="5">180平</option>
+                                        <option value="5">190平</option>
+                                        <option value="5">200平</option>
+                                        <option value="5">200平+</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-sm-12 row-space-1">
+                                <div class="select select-block">
+                                    <label for="map-search-min-bathrooms" class="screen-reader-only">
+                                        最大面积
+                                    </label>
+                                    <select name="min_bedrooms" class="min-bedrooms" id="map-search-min-bedrooms">
+                                        <option value="-1">最小面积</option>
+                                        <option value="1">30平</option>
+                                        <option value="2">40平</option>
+                                        <option value="3">50平</option>
+                                        <option value="4">60平</option>
+                                        <option value="5">70平</option>
+                                        <option value="3">80平</option>
+                                        <option value="4">90平</option>
+                                        <option value="5">100平</option>
+                                        <option value="3">110平</option>
+                                        <option value="4">120平</option>
+                                        <option value="5">130平</option>
+                                        <option value="5">100平</option>
+                                        <option value="3">110平</option>
+                                        <option value="4">120平</option>
+                                        <option value="5">130平</option>
+                                        <option value="5">140平</option>
+                                        <option value="3">150平</option>
+                                        <option value="4">160平</option>
+                                        <option value="5">170平</option>
+                                        <option value="5">180平</option>
+                                        <option value="5">190平</option>
+                                        <option value="5">200平</option>
+                                        <option value="5">200平+</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="filters-section panel-body panel-light">
+                <div class="row">
+                    <div class="filter-label"><label for="">学区房</label></div>
+                    <div class="col-sm-12">
+                        <div class="ui-form-item ui-form-item-switch ui-border-b" style="background-image: none;border: 0">
+                            <p>
+                                是否学区房
+                            </p>
+                            <label class="ui-switch">
+                                <input type="checkbox" checked>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="filters-section panel-body panel-light">
+                <div class="row">
+                    <div class="filter-label"><label for="">电梯/多层</label></div>
+
+                    <ul class="ui-list ui-list-text ui-list-checkbox ui-border-b houseType" style="background-image: none;padding: 0 12.5px">
+                        <li class="ui-border-t">
+                            <label class="ui-checkbox">
+                                <input type="checkbox">
+                            </label>
+                            <p>电梯</p>
+                        </li>
+                        <li class="ui-border-t">
+                            <label class="ui-checkbox">
+                                <input type="checkbox" checked>
+                            </label>
+                            <p>多层</p>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
         <div class="search_action">
             <div class="ui-tab">
                 <ul class="ui-tab-nav ui-border-b">
-                    <li id="user_search" class="ui-border-r">手动筛选</li>
+                    <li id="user_search" class="ui-border-r current">手动筛选</li>
                     <li id="smart">智能推荐</li>
                 </ul>
             </div>
         </div>
         <div class="houseFeed">
-            <ul>
+            <ul style="padding: 12px 0">
                 <li>
-                  <div>
-                    <div class="panel-image listing-img">
-                      <a href="javascript:;" class="media-photo  media-cover ">
-                        <div class=" listing-img-container media-cover text-center">
-                          <img class="  img-responsive-height" src="../serveImg/1.jpg" />
-                        </div>
-                      </a>
-                      <div class="pic_txt">
-                        <div class="pic_name">
-                          <span>日月光伯爵天地</span>
-                          <span>|</span>
-                          <span>[嘉定-嘉定新城]</span>
-                        </div>
-                        <div class="hose_price_wrap">
-                          <span class="house_price">19,000</span>
-                          <span>元/平</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ui-border">
+                    <div>
+                        <div class="panel-image listing-img">
+                            <a href="javascript:;" class="media-photo  media-cover ">
+                                <div class=" listing-img-container media-cover text-center">
+                                    <img class="  img-responsive-height" src="../serveImg/1.jpg"/>
+                                </div>
+                            </a>
 
-                      <div class="ui-label-list">
-                        <label class="ui-label-s">一房55平</label>
-                        <label class="ui-label-s">两方70</label>
-                        <label class="ui-label-s">电梯</label>
-                        <label class="ui-label-s">学区房</label>
-                        <label class="ui-label-s">靠地铁</label>
-                      </div>
+                            <div class="pic_txt">
+                                <div class="pic_name">
+                                    <span>日月光伯爵天地</span>
+                                    <span>|</span>
+                                    <span>[嘉定-嘉定新城]</span>
+                                </div>
+                                <div class="hose_price_wrap">
+                                    <span class="house_price">19,000</span>
+                                    <span>元/平</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-border">
+
+                            <div class="ui-label-list">
+                                <label class="ui-label-s">一房55平</label>
+                                <label class="ui-label-s">两方70</label>
+                                <label class="ui-label-s">电梯</label>
+                                <label class="ui-label-s">学区房</label>
+                                <label class="ui-label-s">靠地铁</label>
+                            </div>
+                        </div>
                     </div>
-                  </div>
 
                 </li>
-              <li>
-                <div>
-                  <div class="panel-image listing-img">
-                    <a href="javascript:;" class="media-photo  media-cover ">
-                      <div class=" listing-img-container media-cover text-center">
-                        <img class="  img-responsive-height" src="../serveImg/2.jpg" />
-                      </div>
-                    </a>
-                    <div class="pic_txt">
-                      <div class="pic_name">
-                        <span>日月光伯爵天地</span>
-                        <span>|</span>
-                        <span>[嘉定-嘉定新城]</span>
-                      </div>
-                      <div class="hose_price_wrap">
-                        <span class="house_price">19,000</span>
-                        <span>元/平</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="ui-border">
+                <li>
+                    <div>
+                        <div class="panel-image listing-img">
+                            <a href="javascript:;" class="media-photo  media-cover ">
+                                <div class=" listing-img-container media-cover text-center">
+                                    <img class="  img-responsive-height" src="../serveImg/1.jpg"/>
+                                </div>
+                            </a>
 
-                    <div class="ui-label-list">
-                      <label class="ui-label-s">一房55平</label>
-                      <label class="ui-label-s">两方70</label>
-                      <label class="ui-label-s">电梯</label>
-                      <label class="ui-label-s">学区房</label>
-                      <label class="ui-label-s">靠地铁</label>
-                    </div>
-                  </div>
-                </div>
+                            <div class="pic_txt">
+                                <div class="pic_name">
+                                    <span>日月光伯爵天地</span>
+                                    <span>|</span>
+                                    <span>[嘉定-嘉定新城]</span>
+                                </div>
+                                <div class="hose_price_wrap">
+                                    <span class="house_price">19,000</span>
+                                    <span>元/平</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-border">
 
-              </li>
-              <li>
-                <div>
-                  <div class="panel-image listing-img">
-                    <a href="javascript:;" class="media-photo  media-cover ">
-                      <div class=" listing-img-container media-cover text-center">
-                        <img class="  img-responsive-height" src="../serveImg/1.jpg" />
-                      </div>
-                    </a>
-                    <div class="pic_txt">
-                      <div class="pic_name">
-                        <span>日月光伯爵天地</span>
-                        <span>|</span>
-                        <span>[嘉定-嘉定新城]</span>
-                      </div>
-                      <div class="hose_price_wrap">
-                        <span class="house_price">19,000</span>
-                        <span>元/平</span>
-                      </div>
+                            <div class="ui-label-list">
+                                <label class="ui-label-s">一房55平</label>
+                                <label class="ui-label-s">两方70</label>
+                                <label class="ui-label-s">电梯</label>
+                                <label class="ui-label-s">学区房</label>
+                                <label class="ui-label-s">靠地铁</label>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="ui-border">
 
-                    <div class="ui-label-list">
-                      <label class="ui-label-s">一房55平</label>
-                      <label class="ui-label-s">两方70</label>
-                      <label class="ui-label-s">电梯</label>
-                      <label class="ui-label-s">学区房</label>
-                      <label class="ui-label-s">靠地铁</label>
+                </li>
+                <li>
+                    <div>
+                        <div class="panel-image listing-img">
+                            <a href="javascript:;" class="media-photo  media-cover ">
+                                <div class=" listing-img-container media-cover text-center">
+                                    <img class="  img-responsive-height" src="../serveImg/1.jpg"/>
+                                </div>
+                            </a>
+
+                            <div class="pic_txt">
+                                <div class="pic_name">
+                                    <span>日月光伯爵天地</span>
+                                    <span>|</span>
+                                    <span>[嘉定-嘉定新城]</span>
+                                </div>
+                                <div class="hose_price_wrap">
+                                    <span class="house_price">19,000</span>
+                                    <span>元/平</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-border">
+
+                            <div class="ui-label-list">
+                                <label class="ui-label-s">一房55平</label>
+                                <label class="ui-label-s">两方70</label>
+                                <label class="ui-label-s">电梯</label>
+                                <label class="ui-label-s">学区房</label>
+                                <label class="ui-label-s">靠地铁</label>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
 
-              </li>
-              <li>
-                <div>
-                  <div class="panel-image listing-img">
-                    <a href="javascript:;" class="media-photo  media-cover ">
-                      <div class=" listing-img-container media-cover text-center">
-                        <img class="  img-responsive-height" src="../serveImg/1.jpg" />
-                      </div>
-                    </a>
-                    <div class="pic_txt">
-                      <div class="pic_name">
-                        <span>日月光伯爵天地</span>
-                        <span>|</span>
-                        <span>[嘉定-嘉定新城]</span>
-                      </div>
-                      <div class="hose_price_wrap">
-                        <span class="house_price">19,000</span>
-                        <span>元/平</span>
-                      </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="panel-image listing-img">
+                            <a href="javascript:;" class="media-photo  media-cover ">
+                                <div class=" listing-img-container media-cover text-center">
+                                    <img class="  img-responsive-height" src="../serveImg/1.jpg"/>
+                                </div>
+                            </a>
+
+                            <div class="pic_txt">
+                                <div class="pic_name">
+                                    <span>日月光伯爵天地</span>
+                                    <span>|</span>
+                                    <span>[嘉定-嘉定新城]</span>
+                                </div>
+                                <div class="hose_price_wrap">
+                                    <span class="house_price">19,000</span>
+                                    <span>元/平</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-border">
+
+                            <div class="ui-label-list">
+                                <label class="ui-label-s">一房55平</label>
+                                <label class="ui-label-s">两方70</label>
+                                <label class="ui-label-s">电梯</label>
+                                <label class="ui-label-s">学区房</label>
+                                <label class="ui-label-s">靠地铁</label>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div class="ui-border">
 
-                    <div class="ui-label-list">
-                      <label class="ui-label-s">一房55平</label>
-                      <label class="ui-label-s">两方70</label>
-                      <label class="ui-label-s">电梯</label>
-                      <label class="ui-label-s">学区房</label>
-                      <label class="ui-label-s">靠地铁</label>
-                    </div>
-                  </div>
-                </div>
-
-              </li>
+                </li>
 
 
             </ul>
+
+
         </div>
 
-    </div>
-</div>
+        <!--<div class="ui-btn-wrap fixed filter-btn" id="filter-btn">-->
+        <!--<button class="ui-btn-lg ui-btn-primary">-->
+        <!--筛选条件-->
+        <!--</button>-->
+        <!--</div>-->
 
+
+        <i class="ui-icon-search fixed"></i>
+    </div>
+
+</div>
 
 
 <div id="search_page" style="display: none">
     <div class="ui-searchbar-wrap ui-border-b">
         <div class="ui-searchbar ui-border-radius">
             <i class="ui-icon-search"></i>
+
             <div class="ui-searchbar-text">搜索小区名称</div>
-            <div class="ui-searchbar-input"><input value="" type="tel" placeholder="请输入小区名称或地址" autocapitalize="off"></div>
+            <div class="ui-searchbar-input"><input value="" type="search" placeholder="请输入小区名称或地址" autocapitalize="off">
+            </div>
             <i class="ui-icon-close"></i>
         </div>
         <button class="ui-searchbar-cancel">取消</button>
@@ -318,6 +939,7 @@
 </div>
 <script src="../js/lib/zepto.min.js"></script>
 <script src="../js/lib/frozen.js"></script>
+<!--<script src="../js/lib/hammer.js"></script>-->
 <script>
     var ymf_config = {
         staticUrl: '',
@@ -325,6 +947,18 @@
     }
 </script>
 <script src="../js/pages/main.js"></script>
+<script>
+    $(window).scroll(function () {
+//        alert(window.pageYOffs
+        if (window.document.body.offsetHeight - window.pageYOffset < window.innerHeight) {
+//            console.log(1)
+            $('#filter-btn').attr('style', 'position: absolute;bottom:-40px')
+        } else {
+            $('#filter-btn').attr('style', 'position: fixed;')
+        }
 
+    });
+
+</script>
 </body>
 </html>
